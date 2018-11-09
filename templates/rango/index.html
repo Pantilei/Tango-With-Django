@@ -10,6 +10,21 @@
   <body>
     <h1>Rango says...</h1>
     <div class="">
+      Hey there partner!
+    </div>
+    <div class="">
+      {% if categories %}
+      <ul>
+        {% for category in categories %}
+          <li>{{ category.name }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <strong>There are no categories</strong>
+      {% endif %}
+    </div>
+
+    <div class="">
       <p>hey there partner!</p>
       <strong>{{ boldmessage }}</strong><br />
     </div>
