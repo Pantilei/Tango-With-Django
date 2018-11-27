@@ -8,5 +8,6 @@
 
 {% block body_block%}
     <h1> {{ message }} </h1>
+    <h3>You have visited this webpage {{visits}} times. Last visit was on {{last_visit}}</h3>
     <img src="{% static "images/car.jpg" %}" alt="Car photo" width=600> <br>
 {% endblock %}
