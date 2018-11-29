@@ -103,7 +103,7 @@ def add_page(request, category_name_slug):
     context_dict = {'form':form, 'category': category}
     return render(request, 'rango/add_page.html', context_dict)
 
-
+'''
 def register(request):
 
     registered = False
@@ -146,12 +146,11 @@ def user_login(request):
             return render(request,'rango/login.html', {'user':user})#HttpResponse("Invalid login details supplied.")
     else:
         return render(request,'rango/login.html', {})
-
-@login_required
-def restricted(request):
-    return HttpResponse("Since you're logged in, you can see this text!")
-
 @login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
+'''
+@login_required
+def restricted(request):
+    return HttpResponse("Since you're logged in, you can see this text!")
